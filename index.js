@@ -9,7 +9,7 @@ app.listen(process.env.PORT || PORT, () => {
  console.log(`Server running on port ${PORT}`);
 });
 
-app.get("/", cors, (req, res, next) => {
+app.get("/", cors(), (req, res, next) => {
   let rawdata = fs.readFileSync('data.json');
   let users = JSON.parse(rawdata);
   if(users){
