@@ -4,7 +4,7 @@ const fs = require('fs');
 
 const PORT = 5000;
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
  console.log(`Server running on port ${PORT}`);
 });
 
